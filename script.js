@@ -17,12 +17,12 @@ function addTask(){
     saveData();
 }
 
-inputBox.addEventListener("keypress", (event)=>{
+inputBox.addEventListener("keypress", (event)=> {
     if(event.key === "Enter"){
         addTask();
-        event.preventDefault(); 
     }
 })
+button.addEventListener("click", addTask);
 
 listContainer.addEventListener("click", function(e){
     if(e.target.tagName === "LI"){
